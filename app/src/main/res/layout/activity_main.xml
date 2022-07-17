@@ -42,23 +42,23 @@
             <TextView
                 android:id="@+id/btnClear"
                 style="@style/ActionButton"
-                android:text="Clear"
+                android:text="@string/clear"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/btnOpenBracket"
                 style="@style/ActionButton"
-                android:text="(" />
+                android:text="@string/open_bracket" />
 
             <TextView
                 android:id="@+id/btnCloseBracket"
                 style="@style/ActionButton"
-                android:text=")" />
+                android:text="@string/close_bracket" />
 
             <TextView
                 android:id="@+id/btnDivision"
                 style="@style/ActionButton"
-                android:text="/" />
+                android:text="@string/division" />
 
         </LinearLayout>
 
@@ -71,22 +71,22 @@
             <TextView
                 android:id="@+id/btnNumber7"
                 style="@style/NumberButton"
-                android:text="7" />
+                android:text="@string/number_7" />
 
             <TextView
                 android:id="@+id/btnNumber8"
                 style="@style/NumberButton"
-                android:text="8" />
+                android:text="@string/number_8" />
 
             <TextView
                 android:id="@+id/btnNumber9"
                 style="@style/NumberButton"
-                android:text="9" />
+                android:text="@string/number_9" />
 
             <TextView
                 android:id="@+id/btnMultiplication"
                 style="@style/ActionButton"
-                android:text="*" />
+                android:text="@string/multiplication" />
 
         </LinearLayout>
 
@@ -99,22 +99,22 @@
             <TextView
                 android:id="@+id/btnNumber4"
                 style="@style/NumberButton"
-                android:text="4" />
+                android:text="@string/number_4" />
 
             <TextView
                 android:id="@+id/btnNumber5"
                 style="@style/NumberButton"
-                android:text="5" />
+                android:text="@string/number_5" />
 
             <TextView
                 android:id="@+id/btnNumber6"
                 style="@style/NumberButton"
-                android:text="6" />
+                android:text="@string/number_6" />
 
             <TextView
                 android:id="@+id/btnAddition"
                 style="@style/ActionButton"
-                android:text="+" />
+                android:text="@string/addition" />
 
         </LinearLayout>
 
@@ -127,22 +127,22 @@
             <TextView
                 android:id="@+id/btnNumber1"
                 style="@style/NumberButton"
-                android:text="1" />
+                android:text="@string/number_1" />
 
             <TextView
                 android:id="@+id/btnNumber2"
                 style="@style/NumberButton"
-                android:text="2" />
+                android:text="@string/number_2" />
 
             <TextView
                 android:id="@+id/btnNumber3"
                 style="@style/NumberButton"
-                android:text="3" />
+                android:text="@string/number_3" />
 
             <TextView
                 android:id="@+id/btnSubtraction"
                 style="@style/ActionButton"
-                android:text="_" />
+                android:text="@string/subtraction" />
 
         </LinearLayout>
 
@@ -155,23 +155,23 @@
             <TextView
                 android:id="@+id/btnPoint"
                 style="@style/NumberButton"
-                android:text="." />
+                android:text="@string/point" />
 
             <TextView
                 android:id="@+id/btnNumber0"
                 style="@style/NumberButton"
-                android:text="0" />
+                android:text="@string/number_0" />
 
             <TextView
                 android:id="@+id/btnBack"
                 style="@style/NumberButton"
-                android:text="Back"
+                android:text="@string/back"
                 android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/btnResult"
                 style="@style/ActionButton"
-                android:text="=" />
+                android:text="@string/result" />
 
         </LinearLayout>
 
