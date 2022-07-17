@@ -128,7 +128,7 @@
                 />
             <TextView
                 style="@style/ActionButton"
-                android:text="-"
+                android:text="_"
                 />
 
         </LinearLayout>
