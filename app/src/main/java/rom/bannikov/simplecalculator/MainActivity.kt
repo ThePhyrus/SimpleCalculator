@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener {
             val string = binding.tvMathOperation.toString()
-            if (string.isNotEmpty()) binding.tvMathOperation.text = string.substring(0, string.length - 1)
+            if (string.isNotEmpty()) binding.tvMathOperation.text =
+                string.substring(0, string.length - 1)
             binding.tvResult.text = "" //todo test!
         }
 
@@ -71,6 +72,7 @@ class MainActivity : AppCompatActivity() {
     private fun setTextFields(string: String) = with(binding) {
         if (tvResult.text != "") {
             tvMathOperation.text = tvResult.text
+            tvResult.text = ""
         }
         tvMathOperation.append(string)
     }
