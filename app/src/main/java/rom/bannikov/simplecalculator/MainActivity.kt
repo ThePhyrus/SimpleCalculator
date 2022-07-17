@@ -2,7 +2,10 @@ package rom.bannikov.simplecalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import net.objecthunter.exp4j.ExpressionBuilder
 import rom.bannikov.simplecalculator.databinding.ActivityMainBinding
+import java.lang.Exception
 
 
 class MainActivity : AppCompatActivity() {
@@ -34,14 +37,27 @@ class MainActivity : AppCompatActivity() {
         binding.btnSubtraction.setOnClickListener { setTextFields(getString(R.string.subtraction)) }
         binding.btnPoint.setOnClickListener { setTextFields(getString(R.string.point)) }
 
-        binding.btnResult.setOnClickListener { setTextFields(getString(R.string.result)) }
+
+
+
+        binding.btnResult.setOnClickListener {
+            try {
+                val expression = ExpressionBuilder(binding.tvMathOperation.text.toString()).build()
+                val result = expression.evaluate()
+                val longResult = result.toLong()
+                if (result == longResult.toDouble())
+                    binding.tvResult.text = longResult.toString()
+                else binding.tvResult.text = result.toString()
+            } catch (error: Exception) {
+                Log.d("@@@", "onCreate: ${error.message}")
+            }
+        }
 
 
 
         binding.btnBack.setOnClickListener {
             val string = binding.tvMathOperation.toString()
-            if (string.isNotEmpty()) binding.tvMathOperation.text =
-                string.substring(0, string.length - 1)
+            if (string.isNotEmpty()) binding.tvMathOperation.text = string.substring(0, string.length - 1)
             binding.tvResult.text = "" //todo test!
         }
 
@@ -53,6 +69,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTextFields(string: String) = with(binding) {
+        if (tvResult.text != "") {
+            tvMathOperation.text = tvResult.text
+        }
         tvMathOperation.append(string)
     }
 }
